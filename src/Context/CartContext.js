@@ -1,5 +1,6 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
+import { baseUrl } from "../Components/baseUrl";
 
 export const cartContext = createContext();
 
@@ -32,7 +33,7 @@ export function CartContextProvider(props) {
   async function addToCart(productId) {
     return axios
       .post(
-        "https://route-ecommerce.onrender.com/api/v1/cart",
+        `${baseUrl}api/v1/cart`,
         { productId }, // this equal to {productId: productId}
         { headers: header } // or {headers} if the variable name was the same (headers)
       )
@@ -43,7 +44,7 @@ export function CartContextProvider(props) {
   async function getLoggedUserCart() {
     // console.log(header.token);
     return axios
-      .get("https://route-ecommerce.onrender.com/api/v1/cart", {
+      .get(`${baseUrl}api/v1/cart`, {
         headers: header,
       })
       .then((response) => response)
@@ -52,7 +53,7 @@ export function CartContextProvider(props) {
 
   async function removeItem(productId) {
     return axios
-      .delete(`https://route-ecommerce.onrender.com/api/v1/cart/${productId}`, {
+      .delete(`${baseUrl}api/v1/cart/${productId}`, {
         headers: header,
       })
       .then((response) => {
@@ -65,7 +66,7 @@ export function CartContextProvider(props) {
   async function updateProductCount(count, productId) {
     return axios
       .put(
-        `https://route-ecommerce.onrender.com/api/v1/cart/${productId}`,
+        `${baseUrl}api/v1/cart/${productId}`,
         { count },
         { headers: header }
       )
@@ -75,7 +76,7 @@ export function CartContextProvider(props) {
 
   async function clearUserCart() {
     return axios
-      .delete(`https://route-ecommerce.onrender.com/api/v1/cart`, {
+      .delete(`${baseUrl}api/v1/cart`, {
         headers: header,
       })
       .then((response) => {
@@ -88,7 +89,7 @@ export function CartContextProvider(props) {
   async function onlinePayment(cartId, shippingAddress) {
     return axios
       .post(
-        `https://route-ecommerce.onrender.com/api/v1/orders/checkout-session/${cartId}?url=http://localhost:3000`,
+        `${baseUrl}api/v1/orders/checkout-session/${cartId}?url=http://localhost:3000`,
         { shippingAddress: shippingAddress },
         {
           headers: header,

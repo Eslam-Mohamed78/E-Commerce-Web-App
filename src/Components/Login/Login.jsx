@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { baseUrl } from "../baseUrl";
 
 export default function Login({ saveUserData }) {
   const [isloading, setisloading] = useState(false);
@@ -28,7 +29,7 @@ export default function Login({ saveUserData }) {
     setisloading(true);
 
     let { data } = await axios
-      .post(`https://route-ecommerce.onrender.com/api/v1/auth/signin`, values)
+      .post(`${baseUrl}api/v1/auth/signin`, values)
       .catch((err) => {
         setisloading(false);
         setMessageError(err.response.data.message);

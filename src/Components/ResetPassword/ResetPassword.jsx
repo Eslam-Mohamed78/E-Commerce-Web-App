@@ -6,6 +6,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { toast } from "react-hot-toast";
+import { baseUrl } from "../baseUrl";
 
 export default function ResetPassword() {
   const [isloading, setisloading] = useState(false);
@@ -31,7 +32,7 @@ export default function ResetPassword() {
 
     await axios
       .put(
-        `https://route-ecommerce.onrender.com/api/v1/auth/resetPassword`,
+        `${baseUrl}api/v1/auth/resetPassword`,
         values
       )
       .then((response) => {

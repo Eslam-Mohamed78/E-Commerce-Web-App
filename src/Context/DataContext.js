@@ -1,5 +1,7 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
+import { baseUrl } from "../Components/baseUrl";
+
 
 export const dataContext = createContext();
 
@@ -8,7 +10,7 @@ export function DataContextProvider(props) {
 
   async function getData(endPoint) {
     return axios
-      .get(`https://route-ecommerce.onrender.com/api/v1/${endPoint}`)
+      .get(`${baseUrl}api/v1/${endPoint}`)
       .then((response) => response)
       .catch((error) => error);
   }
@@ -20,7 +22,7 @@ export function DataContextProvider(props) {
 
   async function getWishList(endPoint) {
     return axios
-      .get(`https://route-ecommerce.onrender.com/api/v1/${endPoint}`, {
+      .get(`${baseUrl}api/v1/${endPoint}`, {
         headers,
       })
       .then((response) => {
@@ -33,7 +35,7 @@ export function DataContextProvider(props) {
 
   async function removeWishListProduct(endPoint) {
     return axios
-      .delete(`https://route-ecommerce.onrender.com/api/v1/${endPoint}`, {
+      .delete(`${baseUrl}api/v1/${endPoint}`, {
         headers,
       })
       .then((response) => response)
@@ -43,7 +45,7 @@ export function DataContextProvider(props) {
   async function addToWishList(productId) {
     return axios
       .post(
-        `https://route-ecommerce.onrender.com/api/v1/wishlist`,
+        `${baseUrl}api/v1/wishlist`,
         { productId },
         { headers }
       )

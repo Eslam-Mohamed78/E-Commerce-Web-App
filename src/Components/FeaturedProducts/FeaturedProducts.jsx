@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { cartContext } from "../../Context/CartContext";
 import { dataContext } from "../../Context/DataContext";
 import { toast } from "react-hot-toast";
+import { baseUrl } from "../baseUrl";
 
 export default function FeaturedProducts() {
   const [products, setproducts] = useState([]);
@@ -15,7 +16,7 @@ export default function FeaturedProducts() {
   async function getProducts() {
     setisloading(true);
     let { data } = await axios.get(
-      `https://route-ecommerce.onrender.com/api/v1/products`
+      `${baseUrl}api/v1/products`
     );
     setproducts(data.data);
     console.log("featuredProducts data", data.data);

@@ -5,6 +5,7 @@ import { cartContext } from "../../Context/CartContext";
 import axios from "axios";
 import Slider from "react-slick";
 import { toast } from "react-hot-toast";
+import { baseUrl } from "../baseUrl";
 
 export default function ProductDetails() {
   const [productDetails, setproductDetails] = useState(null);
@@ -15,7 +16,7 @@ export default function ProductDetails() {
   async function getProductDetails(id) {
     setisloading(true);
     let { data } = await axios.get(
-      `https://route-ecommerce.onrender.com/api/v1/products/${id}`
+      `${baseUrl}api/v1/products/${id}`
     );
     setproductDetails(data.data);
     setisloading(false);

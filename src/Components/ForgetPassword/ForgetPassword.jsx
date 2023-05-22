@@ -6,6 +6,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { toast } from "react-hot-toast";
+import { baseUrl } from "../baseUrl";
 
 
 export default function ForgetPassword() {
@@ -29,7 +30,7 @@ export default function ForgetPassword() {
 
     await axios
       .post(
-        `https://route-ecommerce.onrender.com/api/v1/auth/forgotPasswords`,
+        `${baseUrl}api/v1/auth/forgotPasswords`,
         values
       )
       .then((response) => {
@@ -69,7 +70,7 @@ export default function ForgetPassword() {
 
     await axios
       .post(
-        `https://route-ecommerce.onrender.com/api/v1/auth/verifyResetCode`,
+        `${baseUrl}api/v1/auth/verifyResetCode`,
         values
       )
       .then((response) => {

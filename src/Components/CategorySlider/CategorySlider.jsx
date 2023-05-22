@@ -2,13 +2,15 @@ import React, { useEffect, useState } from "react";
 import style from "./CategorySlider.module.css";
 import axios from "axios";
 import Slider from "react-slick";
+import { baseUrl } from "../baseUrl";
+
 
 export default function CategorySlider() {
   const [Categories, setCategories] = useState([]);
 
   async function getCategories() {
     let { data } = await axios.get(
-      `https://route-ecommerce.onrender.com/api/v1/categories`
+      `${baseUrl}api/v1/categories`
     );
     setCategories(data.data);
   }
