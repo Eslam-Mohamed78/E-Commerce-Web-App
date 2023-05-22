@@ -18,9 +18,9 @@
 HTML5 / CSS3 / Bootstrap5 / JS / LocalStorage / Reat.js / Context.
 
 ### Live-Demo :
-https://eslam-mohamed78.github.io/E-Commerce-App/
+https://eslam-mohamed78.github.io/E-Commerce-Web-App/
 
 ### Github-Repo :
-https://github.com/Eslam-Mohamed78/E-Commerce-App
+https://github.com/Eslam-Mohamed78/E-Commerce-Web-App
 
 Contact If you have any questions or feedback, please contact at em7506386@gmail.com
