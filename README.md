@@ -15,7 +15,7 @@
 - react-helmet.
 
 ## Technologies:
-HTML5 / CSS3 / Bootstrap5 / JS / LocalStorage / Reat.js / Context.
+HTML5 / CSS3 / Bootstrap5 / JS / LocalStorage / React.js / Context.
 
 ### Live-Demo :
 https://eslam-mohamed78.github.io/E-Commerce-Web-App/
