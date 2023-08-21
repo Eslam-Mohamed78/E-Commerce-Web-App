@@ -22,7 +22,7 @@ https://eslam-mohamed78.github.io/E-Commerce-Web-App/
 
 #### Account for testing
 em7506386@gmail.com
-A12345
+Q12345
 
 ### Github-Repo :
 https://github.com/Eslam-Mohamed78/E-Commerce-Web-App
