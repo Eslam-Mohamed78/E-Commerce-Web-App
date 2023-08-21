@@ -20,6 +20,10 @@ HTML5 / CSS3 / Bootstrap5 / JS / LocalStorage / React.js / Context.
 ### Live-Demo :
 https://eslam-mohamed78.github.io/E-Commerce-Web-App/
 
+#### Account for testing
+em7506386@gmail.com
+A12345
+
 ### Github-Repo :
 https://github.com/Eslam-Mohamed78/E-Commerce-Web-App
 
